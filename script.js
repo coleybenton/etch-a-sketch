@@ -9,6 +9,7 @@
 
 */
 
+// let gridTotal = prompt(number) then number x number
 const containerDiv = document.querySelector("#container");
 const varArray = [];
 
@@ -19,5 +20,16 @@ while (i < 255) {
 };
 
 function createDivFromArray(arrayValue) {
-  const arrayValue = document.createElement("div");
+  arrayValue = document.createElement("div");
+  containerDiv.appendChild(arrayValue);
 };
+
+for (let i = 0; i < 255; i++) {
+  createDivFromArray(varArray[i]);
+};
+
+const startingPointDiv = containerDiv.firstElementChild;
+
+for (let i = 0; i < 255; i++) {
+  let targetDiv = startingPointDiv.nextElementSibling;
+}
